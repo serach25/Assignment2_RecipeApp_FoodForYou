@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:local="clr-namespace:FoodForYou"
+             x:Class="FoodForYou.Diet"
+             BackgroundColor="White"
+             Title="Food for Life">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Label Text="Customize your recipes"
+                   HorizontalOptions="Center"
+                   TextColor="Black"
+                   FontSize="Medium"
+                   Margin="25,5,0,0"/>
+
+            <Label Text="Which diet do you follow?"
+                   TextColor="Black"
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                   Margin="0,0,0,0"/>
+
+
+            <Grid
+                Margin="20,0,20,0">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Row="0" 
+                        Grid.Column="0" 
+                        x:Name="gluten"
+                        Text="GLUTEN FREE" 
+                        ContentLayout="Top,0" 
+                        Image="{local:ImageResource FoodForYou.Images.glutenfree2.png}" 
+                        HorizontalOptions="Center" 
+                        BackgroundColor="White" 
+                        Clicked="Diet_Selected"/>
+                
+                <Button Grid.Row="0" 
+                        Grid.Column="1" 
+                        x:Name="keto"
+                        Text="KETOGENIC" 
+                        ContentLayout="Top,0" 
+                        Image="{local:ImageResource FoodForYou.Images.keto2.png}"  
+                        HorizontalOptions="Center" 
+                        BackgroundColor="White" 
+                        Clicked="Diet_Selected"/>
+                
+                <Button Grid.Row="0" 
+                        Grid.Column="2" 
+                         x:Name="vegetarian"
+                        Text="VEGETARIAN" 
+                        ContentLayout="Top,0" 
+                        Image="{local:ImageResource FoodForYou.Images.vegetarian2.png}"  
+                        HorizontalOptions="Center" 
+                        BackgroundColor="White" 
+                        Clicked="Diet_Selected"/>
+
+                <Button Grid.Row="1" 
+                        Grid.Column="0" 
+                        x:Name="lacto"
+                        Text="LACTO-VEGETARIAN" 
+                        ContentLayout="Top,0" 
+                        Image="{local:ImageResource FoodForYou.Images.lacto-veg2.png}"  
+                        HorizontalOptions="Center" 
+                        BackgroundColor="White" 
+                        Clicked="Diet_Selected"/>
+
+                <Button Grid.Row="1" 
+                        Grid.Column="1" 
+                        x:Name="ovo"
+                        Text="OVO-VEGETARIAN" 
+                        ContentLayout="Top,0" 
+                        Image="{local:ImageResource FoodForYou.Images.ovo-veg2.png}"  
+                        HorizontalOptions="Center" 
+                        BackgroundColor="White" 
+                        Clicked="Diet_Selected"/>
+
+                <Button Grid.Row="1" 
+                        Grid.Column="2" 
+                        x:Name="vegan"
+                        Text="VEGAN" 
+                        ContentLayout="Top,0" 
+                        Image="{local:ImageResource FoodForYou.Images.vegan2.png}"  
+                        HorizontalOptions="Center" 
+                        BackgroundColor="White"
+                        Clicked="Diet_Selected"/>
+
+                <Button Grid.Row="2" 
+                        Grid.Column="0" 
+                        x:Name="pescetarian"
+                        Text="PESCETARIAN" 
+                        ContentLayout="Top,0" 
+                        Image="{local:ImageResource FoodForYou.Images.pescetarian2.png}"  
+                        HorizontalOptions="Center" 
+                        BackgroundColor="White"
+                        Clicked="Diet_Selected"/>
+
+                <Button Grid.Row="2" 
+                        Grid.Column="1" 
+                        x:Name="paleo"
+                        Text="PALEO" 
+                        ContentLayout="Top,0" 
+                        Image="{local:ImageResource FoodForYou.Images.paleo2.png}"  
+                        HorizontalOptions="Center" 
+                        BackgroundColor="White" 
+                        Clicked="Diet_Selected"/>
+
+                <Button Grid.Row="2" 
+                        Grid.Column="2" 
+                        x:Name="primal"
+                        Text="PRIMAL" 
+                        ContentLayout="Top,0" 
+                        Image="{local:ImageResource FoodForYou.Images.primal2.png}"  
+                        HorizontalOptions="Center" 
+                        BackgroundColor="White"
+                        Clicked="Diet_Selected"/>
+
+                <Button Grid.Row="3" 
+                        Grid.Column="0" 
+                        x:Name="lowfodmap"
+                        Text="LOW FODMAP" 
+                        ContentLayout="Top,0" 
+                        Image="{local:ImageResource FoodForYou.Images.low-fodmap2.png}"  
+                        HorizontalOptions="Center" 
+                        BackgroundColor="White" 
+                        Clicked="Diet_Selected"/>
+
+                <Button Grid.Row="3" 
+                        Grid.Column="1" 
+                        x:Name="whole30"
+                        Text="WHOLE30" 
+                        ContentLayout="Top,0" 
+                        Image="{local:ImageResource FoodForYou.Images.whole302.png}"  
+                        HorizontalOptions="Center" 
+                        BackgroundColor="White" 
+                        Clicked="Diet_Selected"/>
+                
+               <!-- <Button Grid.Row="3" 
+                        Grid.Column="2" 
+                        x:Name="all"
+                        Text="ALL RECIPES" 
+                        ContentLayout="Top,0" 
+                        Image="{local:ImageResource FoodForYou.Images.allrecipes.png}"  
+                        HorizontalOptions="Center" 
+                        BackgroundColor="White" 
+                        Clicked="Diet_Selected"/> -->
+
+            </Grid>
+
+            <Button 
+                    BackgroundColor="Red"
+                    CornerRadius="5"
+                    FontSize="Medium"
+                    TextColor="white"
+                    Text="Next"
+                    FontAttributes="Bold"
+                    Margin="125,0,125,-5"
+                    Clicked="NextPressed" />
+
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
+
+
+

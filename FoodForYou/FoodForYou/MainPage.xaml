@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+              xmlns:local="clr-namespace:FoodForYou"
+             x:Class="FoodForYou.MainPage">
+
+    <StackLayout>
+        
+        <Label Text="Welcome to" 
+               HorizontalOptions="Center"
+               TextColor="Black"
+               FontSize="Large"
+               Margin="0,70,0,20" />
+
+        <Image Source="{local:ImageResource FoodForYou.Images.foodforyoulogopng.png}" 
+               Margin="25, -10" />
+        
+        <Label Text="Recipes with your diet needs in mind" 
+               HorizontalOptions="Center"
+               TextColor="Black"
+               FontSize="Small"
+               Margin="0,10,0,0" />
+
+        <Button BackgroundColor="Red"
+                CornerRadius="5"
+                FontSize="Medium"
+                TextColor="White"
+                FontAttributes="Bold"
+                Text="Get started"
+                VerticalOptions="Center"
+                Margin="125,50,125,0"
+                Clicked="GetStarted" />
+
+        <Image Source="{local:ImageResource FoodForYou.Images.food-background.png}" Margin="0,30,0,0"/>
+
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:local="clr-namespace:FoodForYou"
+             x:Class="FoodForYou.Intolerances"
+             BackgroundColor="White"
+             Title="Food for Life">
+    
+    <ContentPage.Content>
+        
+        <StackLayout>
+
+                <Label Text="Which intolerances do you have?"
+                   TextColor="Black"
+                   FontSize="Large"
+                   Margin="25,0,0,0"
+                   FontAttributes="Bold" 
+                       HorizontalOptions="Center"/>
+
+
+            <Label Text="(select 1 or more)"
+                   TextColor="Black"
+                   FontSize="Small"
+                   Margin="25,0,0,0" 
+                   HorizontalOptions="Center"/>
+
+            <Grid
+                Margin="20,0,20,0">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Row="0" 
+                        Grid.Column="0" 
+                        x:Name="dairy"
+                        Text="DAIRY" 
+                        ContentLayout="Top,0" 
+                        Image="{local:ImageResource FoodForYou.Images.dairy.png}" 
+                        HorizontalOptions="Center" 
+                        BackgroundColor="White" 
+                        Clicked="Intolerances_Selected"
+                    />
+
+                <Button Grid.Row="0" 
+                        Grid.Column="1" 
+                        x:Name="eggs"
+                        Text="EGGS" 
+                        ContentLayout="Top,0" 
+                        Image="{local:ImageResource FoodForYou.Images.eggs.png}"  
+                        HorizontalOptions="Center" 
+                        BackgroundColor="White" 
+                        Clicked="Intolerances_Selected"
+                     />
+
+                <Button Grid.Row="0" 
+                        Grid.Column="2" 
+                         x:Name="fish"
+                        Text="FISH" 
+                        ContentLayout="Top,0" 
+                        Image="{local:ImageResource FoodForYou.Images.fish.png}"  
+                        HorizontalOptions="Center" 
+                        BackgroundColor="White" 
+                        Clicked="Intolerances_Selected"
+                        />
+
+                <Button Grid.Row="1" 
+                        Grid.Column="0" 
+                        x:Name="gluten"
+                        Text="GLUTEN" 
+                        ContentLayout="Top,0" 
+                        Image="{local:ImageResource FoodForYou.Images.gluten.png}"  
+                        HorizontalOptions="Center" 
+                        BackgroundColor="White" 
+                        Clicked="Intolerances_Selected"
+                       />
+
+                <Button Grid.Row="1" 
+                        Grid.Column="1" 
+                        x:Name="grain"
+                        Text="GRAIN" 
+                        ContentLayout="Top,0" 
+                        Image="{local:ImageResource FoodForYou.Images.grain.png}"  
+                        HorizontalOptions="Center" 
+                        BackgroundColor="White" 
+                        Clicked="Intolerances_Selected"
+                       />
+
+                <Button Grid.Row="1" 
+                        Grid.Column="2" 
+                        x:Name="peanuts"
+                        Text="PEANUTS" 
+                        ContentLayout="Top,0" 
+                        Image="{local:ImageResource FoodForYou.Images.peanuts.png}"  
+                        HorizontalOptions="Center" 
+                        BackgroundColor="White"
+                        Clicked="Intolerances_Selected"
+                       
+                       />
+
+                <Button Grid.Row="2" 
+                        Grid.Column="0" 
+                        x:Name="sesame"
+                        Text="SESAME" 
+                        ContentLayout="Top,0" 
+                        Image="{local:ImageResource FoodForYou.Images.sesame.png}"  
+                        HorizontalOptions="Center" 
+                        BackgroundColor="White"
+                        Clicked="Intolerances_Selected"
+                />
+
+                <Button Grid.Row="2" 
+                        Grid.Column="1" 
+                        x:Name="shellfish"
+                        Text="SHELLFISH" 
+                        ContentLayout="Top,0" 
+                        Image="{local:ImageResource FoodForYou.Images.shellfish.png}"  
+                        HorizontalOptions="Center" 
+                        BackgroundColor="White" 
+                        Clicked="Intolerances_Selected"
+/>
+
+                <Button Grid.Row="2" 
+                        Grid.Column="2" 
+                        x:Name="soy"
+                        Text="SOY" 
+                        ContentLayout="Top,0" 
+                        Image="{local:ImageResource FoodForYou.Images.soy.png}"  
+                        HorizontalOptions="Center" 
+                        BackgroundColor="White"
+                        Clicked="Intolerances_Selected"
+                     />
+
+                <Button Grid.Row="3" 
+                        Grid.Column="0" 
+                        x:Name="sulphites"
+                        Text="SULPHITES" 
+                        ContentLayout="Top,0" 
+                        Image="{local:ImageResource FoodForYou.Images.sulphites.png}"  
+                        HorizontalOptions="Center" 
+                        BackgroundColor="White" 
+                        Clicked="Intolerances_Selected"
+                      />
+
+                <Button Grid.Row="3" 
+                        Grid.Column="1" 
+                        x:Name="treenuts"
+                        Text="TREENUTS" 
+                        ContentLayout="Top,0" 
+                        Image="{local:ImageResource FoodForYou.Images.treenuts.png}"  
+                        HorizontalOptions="Center" 
+                        BackgroundColor="White" 
+                        Clicked="Intolerances_Selected"
+                    />
+
+                <Button Grid.Row="3" 
+                        Grid.Column="2" 
+                        x:Name="wheat"
+                        Text="WHEAT" 
+                        ContentLayout="Top,0" 
+                        Image="{local:ImageResource FoodForYou.Images.wheat.png}"  
+                        HorizontalOptions="Center" 
+                        BackgroundColor="White" 
+                        Clicked="Intolerances_Selected"
+                     />
+
+            </Grid>
+
+            <Button BackgroundColor="Red"
+                    CornerRadius="5"
+                    FontSize="Medium"
+                    TextColor="white"
+                     Margin="100,0,100,0"
+                    Text="Show my Recipes"
+                    FontAttributes="Bold"
+                    Clicked="ShowRecipesPressed" />
+
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
+      

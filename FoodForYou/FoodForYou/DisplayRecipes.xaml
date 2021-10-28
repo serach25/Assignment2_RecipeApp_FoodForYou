@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="FoodForYou.DisplayRecipes"
+             Title="Food for Life">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Meal Plan Generator" Order="Primary" Clicked="ToolbarItem_Clicked"></ToolbarItem>
+       <!-- <ToolbarItem Text="Find Wine Pairing" Order="Primary"></ToolbarItem>-->
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        
+        <StackLayout>
+
+            <Label Text="Recipes:"
+                   HorizontalOptions="Center"
+                   TextColor="Black"
+                   FontSize="Large" 
+                   FontAttributes="Bold"/>
+
+            <!--ListView of recipes-->
+            <ListView 
+                RowHeight="100"
+                BackgroundColor="White"
+                x:Name="MyRecipeList" 
+                ItemSelected="MyRecipeList_ItemSelected" >
+
+                <ListView.ItemTemplate  BackgroundColor="White">
+                    <DataTemplate>
+
+                        <ViewCell>
+
+                            <StackLayout Orientation="Horizontal" Padding="8" BackgroundColor="White" VerticalOptions="Center" HorizontalOptions="StartAndExpand">
+                               <!-- <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">-->
+                                  <!--  <Label TextColor="Black" Text="{Binding image}"></Label>-->
+                                    <Image Source="{Binding image}"></Image> 
+                               <!-- </StackLayout>-->
+                                <Label TextColor="Black" FontSize="Medium" Text="{Binding title}"></Label>
+
+                            </StackLayout>
+
+                        </ViewCell>
+
+                    </DataTemplate>
+
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
+    
+
+
+    

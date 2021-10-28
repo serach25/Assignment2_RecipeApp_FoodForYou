@@ -1,0 +1,125 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\allrecipes.png" />
+    <None Remove="Images\dairy.png" />
+    <None Remove="Images\eggs.png" />
+    <None Remove="Images\fish.png" />
+    <None Remove="Images\food-background.png" />
+    <None Remove="Images\foodforyoubackground.png" />
+    <None Remove="Images\foodforyoulogopng.png" />
+    <None Remove="Images\gluten.png" />
+    <None Remove="Images\glutenfree.png" />
+    <None Remove="Images\glutenfree2.png" />
+    <None Remove="Images\grain.png" />
+    <None Remove="Images\keto.png" />
+    <None Remove="Images\keto2.png" />
+    <None Remove="Images\lacto-veg.png" />
+    <None Remove="Images\lacto-veg2.png" />
+    <None Remove="Images\low-fodmap.png" />
+    <None Remove="Images\low-fodmap2.png" />
+    <None Remove="Images\ovo-veg.png" />
+    <None Remove="Images\ovo-veg2.png" />
+    <None Remove="Images\paleo.png" />
+    <None Remove="Images\paleo2.png" />
+    <None Remove="Images\peanuts.png" />
+    <None Remove="Images\pescetarian.png" />
+    <None Remove="Images\pescetarian2.png" />
+    <None Remove="Images\primal.png" />
+    <None Remove="Images\primal2.png" />
+    <None Remove="Images\sesame.png" />
+    <None Remove="Images\shellfish.png" />
+    <None Remove="Images\soy.png" />
+    <None Remove="Images\sulphites.png" />
+    <None Remove="Images\treenuts.png" />
+    <None Remove="Images\vegan.png" />
+    <None Remove="Images\vegan2.png" />
+    <None Remove="Images\vegetarian.png" />
+    <None Remove="Images\vegetarian2.png" />
+    <None Remove="Images\wheat.png" />
+    <None Remove="Images\whole30.png" />
+    <None Remove="Images\whole302.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\allrecipes.png" />
+    <EmbeddedResource Include="Images\dairy.png" />
+    <EmbeddedResource Include="Images\eggs.png" />
+    <EmbeddedResource Include="Images\fish.png" />
+    <EmbeddedResource Include="Images\food-background.png" />
+    <EmbeddedResource Include="Images\gluten.png" />
+    <EmbeddedResource Include="Images\glutenfree2.png" />
+    <EmbeddedResource Include="Images\grain.png" />
+    <EmbeddedResource Include="Images\keto2.png" />
+    <EmbeddedResource Include="Images\lacto-veg2.png" />
+    <EmbeddedResource Include="Images\low-fodmap2.png" />
+    <EmbeddedResource Include="Images\ovo-veg2.png" />
+    <EmbeddedResource Include="Images\paleo2.png" />
+    <EmbeddedResource Include="Images\peanuts.png" />
+    <EmbeddedResource Include="Images\pescetarian2.png" />
+    <EmbeddedResource Include="Images\primal2.png" />
+    <EmbeddedResource Include="Images\sesame.png" />
+    <EmbeddedResource Include="Images\shellfish.png" />
+    <EmbeddedResource Include="Images\soy.png" />
+    <EmbeddedResource Include="Images\sulphites.png" />
+    <EmbeddedResource Include="Images\treenuts.png" />
+    <EmbeddedResource Include="Images\vegan.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\foodforyoubackground.png" />
+    <EmbeddedResource Include="Images\foodforyoulogopng.png" />
+    <EmbeddedResource Include="Images\glutenfree.png" />
+    <EmbeddedResource Include="Images\keto.png" />
+    <EmbeddedResource Include="Images\lacto-veg.png" />
+    <EmbeddedResource Include="Images\low-fodmap.png" />
+    <EmbeddedResource Include="Images\ovo-veg.png" />
+    <EmbeddedResource Include="Images\paleo.png" />
+    <EmbeddedResource Include="Images\pescetarian.png" />
+    <EmbeddedResource Include="Images\primal.png" />
+    <EmbeddedResource Include="Images\vegan2.png" />
+    <EmbeddedResource Include="Images\vegetarian.png" />
+    <EmbeddedResource Include="Images\vegetarian2.png" />
+    <EmbeddedResource Include="Images\wheat.png" />
+    <EmbeddedResource Include="Images\whole30.png" />
+    <EmbeddedResource Include="Images\whole302.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Net.Http" Version="2.2.29" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
+    <PackageReference Include="Xamarin.Forms" Version="4.1.0.555618" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Diet.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="DisplayPlan.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="DisplayRecipes.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="DisplaySavedPlans.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Intolerances.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="MealPlanGenerator.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

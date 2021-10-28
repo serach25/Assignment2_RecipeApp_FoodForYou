@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="FoodForYou.DisplayPlan"
+             Title="Food for Life">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Save Meal Plan and view all saved meals" Order="Primary" Clicked="Save_Mealplan"></ToolbarItem>
+        <!-- <ToolbarItem Text="Find Wine Pairing" Order="Primary"></ToolbarItem>-->
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Meals:"
+                   HorizontalOptions="Center"
+                   TextColor="Black"
+                   FontSize="Large" 
+                   FontAttributes="Bold"
+                   Margin="0,50,0,0"/>
+
+            <Label Text="Breakfast, Lunch, and Dinner:"
+                   HorizontalOptions="Center"
+                   TextColor="Black"
+                   FontSize="Medium" 
+                   Margin="0,0,0,50"/>
+
+            <!--ListView of meals-->
+            <ListView 
+                RowHeight="125"
+                BackgroundColor="White"
+                x:Name="MyMealList"
+                Margin="25,0,0,0"
+             >
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+
+                        <ViewCell>
+
+                            <StackLayout Orientation="Vertical" Padding="8" BackgroundColor="White" VerticalOptions="Center">
+                                <!-- <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">-->
+                                <!--  <Label TextColor="Black" Text="{Binding image}"></Label>-->
+                               <!-- <Image Source="{Binding sourceUrl}"></Image> -->
+                                <!-- </StackLayout>-->
+                                <Label TextColor="Black" FontSize="Medium" FontAttributes="Bold" Text="{Binding title}"></Label>
+                                <StackLayout Orientation="Horizontal" >
+                                    <Label TextColor="Black" FontSize="Medium" Text="Cook Time: "></Label>
+                                <Label TextColor="Black" FontSize="Medium" Text="{Binding readyInMinutes}"></Label>
+                                    <Label TextColor="Black" FontSize="Medium" Text="minutes"></Label>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" >
+                                    <Label TextColor="Black" FontSize="Medium" Text="Servings: "></Label>
+                                <Label TextColor="Black" FontSize="Medium" Text="{Binding servings}"></Label>
+                            </StackLayout>
+
+                            </StackLayout>
+                            
+
+                        </ViewCell>
+
+                    </DataTemplate>
+
+                </ListView.ItemTemplate>
+
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

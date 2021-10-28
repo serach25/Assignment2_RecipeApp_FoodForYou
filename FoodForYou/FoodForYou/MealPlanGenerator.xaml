@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="FoodForYou.MealPlanGenerator"
+             Title="Food for Life">
+    <ContentPage.Content>
+        <StackLayout   Margin="25,50, 25,0">
+            <Label Text="Welcome to the Meal Plan Generator"
+               TextColor="Black" 
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                 
+                   HorizontalOptions="Center"/>
+            <StackLayout Orientation="Horizontal" Margin="0,100, 0,0">
+                <Label
+                Text="Time frame: 1 day"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                />
+                
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Enter total calorie amount:" FontSize="Medium" FontAttributes="Bold"/>
+                <Entry x:Name="calories" FontSize="Medium" Placeholder="target calories" />
+            </StackLayout>
+          <!--  <Label x:Name="diet" FontSize="Medium" Text="The current diet selected is" HorizontalOptions="Center" />
+            <Label x:Name="intolerances" FontSize="Medium" Text="Your intolerences are" HorizontalOptions="Center"/>-->
+
+            <Button BackgroundColor="Red"
+                CornerRadius="5"
+                FontSize="Medium"
+                TextColor="White"
+                FontAttributes="Bold"
+                Text="Generate"
+                VerticalOptions="CenterAndExpand"
+                Margin="125,0,125,0"
+                Clicked="Generate_MealPlan" />
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
